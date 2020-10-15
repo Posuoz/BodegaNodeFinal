@@ -1,0 +1,41 @@
+<%- include('header') -%>
+
+<h1>Liste des produits</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Description</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Catégorie</th>
+        <th scope="col">Publié</th>
+        <th scope="col">En vedette</th>
+      </tr>
+      </thead>
+      <tbody>
+      <th>
+          <tr>
+        <td><% for(let i=0;i<plat.length;i++){ %></td>
+           <td><%= plat[i].Nom %></td>
+           <td><%= plat[i].Description %></td>
+           <td><%= plat[i].Prix %></td>
+           <td><%= plat[i].Catégorie %></td>
+           <td><%= plat[i].Disponibilité %></td>
+           <td><%= plat[i].Miseenavant %></td>
+        <% } %>
+        
+   
+
+    
+    </table>
+
+
+
+
+
+
+
+
+
+<%- include('footer') -%>

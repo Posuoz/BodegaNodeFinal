@@ -1,0 +1,41 @@
+<%- include('header') -%>
+<form action="/admin" method="POST">
+    
+        <div class="form-group">
+          <label for="formGroupExampleInput">Nom du plat</label>
+          <input type="text" name="Nom" class="form-control" id="formGroupExampleInput" placeholder="Nom du plat">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control"name="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Prix</label>
+            <input type="text"name="Prix" class="form-control" id="formGroupExampleInput2" placeholder="Prix">
+          </div>
+      
+   <div class="custom-file">
+    <input type="file" class="custom-file-input" id="customFile">
+    <label class="custom-file-label"name="Image" for="customFile">Image</label>
+    </div>
+    <form class="form-inline">
+        <label for="Categorie">Categorie</label>
+        <select id="Categorieplats"name="Categorie" class="form-control">
+          <option value="Pizza">Pizza</option>
+          <option value="Pates">Pates</option>
+          <option value="Salades">Salades</option>
+          <option value="Desserts">Desserts</option>
+          <option value="Boissons">Boissons</option>
+          <option value="Vins">Vins</option>
+        </select>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" name="Disponibilité" type="checkbox" id="inlineCheckbox1" value="Disponibilité">
+        <label class="form-check-label" for="inlineCheckbox1">Publié</label>
+      </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" name="Miseenavant" type="checkbox" id="inlineCheckbox1" value="Miseenavant">
+        <label class="form-check-label" for="inlineCheckbox1">En vedette</label>
+      </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+  <%- include('footer') -%>
